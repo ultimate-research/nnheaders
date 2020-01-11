@@ -6,4 +6,5 @@ The header files contained herewithin are entirely user created via Reverse Engi
 Do not ask for or PR any copyrighted material to this repo. You will be ignored.
 
 # Credits
-Much of these headers come from [Skyline](https://github.com/shadowninja108/Skyline), which is itself derived from work on [Starlight](https://github.com/shadowninja108/Starlight) and [OdysseyReversed](https://github.com/shibbo/OdysseyReversed/).
+ - [Shadow](https://github.com/shadowninja108/) - For [Skyline](https://github.com/shadowninja108/Skyline), which was the primary inspiration and use case for this repo.
+ - [Shibbo](https://github.com/shibbo) - For [OdysseyReversed](https://github.com/shibbo/OdysseyReversed/), which most of these headers came from.
