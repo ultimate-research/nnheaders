@@ -14,6 +14,16 @@ namespace nn
     {
         class Display;
         class Layer;
+        class NativWindow;
+        struct DisplayInfo
+        {
+            static const int maxNameLen = 64;
+            char name[maxNameLen];
+            bool hasLayerLimit; __aligned(8)
+            int64_t maxLayers;               
+            int64_t maxWidth;
+            int64_t maxHeight;
+        };
 
         enum ScalingMode
         {
@@ -25,10 +35,12 @@ namespace nn
         };
 
         void Initialize();
-        Result OpenDefaultDisplay(nn::vi::Display **out_Disp);
-        Result CreateLayer(nn::vi::Layer *out_Layer*, nn::vi::Display *disp);
+        Result OpenDefaultDisplay(nn::vi::Display **outDisp);
+        Result CreateLayer(nn::vi::Layer **outLayer, nn::vi::Display *disp);
         Result SetLayerScalingMode(nn::vi::Layer *layer, nn::vi::ScalingMode scalingMode);
         Result GetDisplayVsyncEvent(nn::os::SystemEventType *, nn::vi::Display *);
         Result GetNativeWindow(void **window, nn::vi::Layer *);
+        Result GetLatestFrameNumber	(u64 *pOutFrameNumber, const Layer *pLayer);
+        int ListDisplays(DisplayInfo *outDisplays, int count);
     };
 };

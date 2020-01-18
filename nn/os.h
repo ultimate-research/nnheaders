@@ -150,6 +150,7 @@ namespace nn
 
         // THREAD
         Result CreateThread(nn::os::ThreadType *, void (*)(void *), void *arg, void *srcStack, u64 stackSize, s32 priority, s32 coreNum);
+        Result CreateThread(nn::os::ThreadType *, void (*)(void *), void *arg, void *srcStack, u64 stackSize, s32 priority);
         void DestroyThread(nn::os::ThreadType *);
         void StartThread(nn::os::ThreadType *);
         void SetThreadName(nn::os::ThreadType *, char const *threadName);
